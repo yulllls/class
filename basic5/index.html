@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>부모자식관계</title>
+    <style>
+        *{margin: 0;padding: 0;}
+        .전체{width: 600px; /* 넓이값 */
+            background-color: aqua;
+            margin: auto; /* 영역을 가운데로 정렬 */
+            text-align: center; /* 글자를 가운데 정렬 */
+            border: red solid 2px;
+            padding: 20px; 
+            }
+       /*  부모는 자식의 높이를 따라감 
+        자식은 부모의 넓이를 따라감 */
+        .전체 .첫째{background-color: pink;}
+        .전체 .둘째{background-color: darkblue;
+        padding: 20px; }
+        .전체 .둘째 .둘자{width: 33.3333%;
+         float:left;}
+        .전체 .둘째 .둘자1{background-color: brown;
+        }
+        .전체 .둘째 .둘자2{background-color: cornflowerblue;
+        flon}
+        .전체 .둘째 .둘자3{background-color: crimson;
+        float:right;}
+        .전체 .효자 {clear: both;}
+        .전체 .셋째{background-color: aliceblue;
+        padding: 20px; margin-top: 50px;}
+        .전체 .셋째::after{content: ""; clear: both; display: block;}  
+        /* 클리어바쓰는 블록요소만 가능하기에 디스플레이 블록을 추가 하는 것 */
+        /* clear:both;는 블럭요소에서만 효능이 발휘됨 
+        :before,:atfer는 인라인 요소임 */
+        .전체 .셋째 .세자1{background-color: burlywood;
+        width: 50%; float: left;}
+        .전체 .셋째 .세자1 span{background-color: chartreuse;}
+        .전체 .셋째 .세자1 span::before{
+            /* css에서 공간을 만들 수 있다 */
+            content: "앞";
+        }
+        .전체 .셋째 .세자1 span::after{
+            /* css에서 공간을 만들 수 있다 */
+            content: "뒤";
+        }
+
+        .전체 .셋째 .세자2{background-color: darkgrey;
+        width: 50%; float: right;}
+        .전체 .셋째 .세자2 span{background-color: dodgerblue;}
+        /* span 안에 있는 글자는 고유의 영역을 지니는듯? */
+    </style>
+</head>
+<body>
+    <div class="전체">
+        <div class="첫째">첫째</div>   
+        <div class="둘째">
+            <div class="둘자 둘자1">둘째자식1</div>
+            <div class="둘자 둘자2">둘째자식2</div>
+            <div class="둘자 둘자3">둘째자식3</div>
+            <div class="효자"></div>
+        </div>   
+        <div class="셋째">
+            <div class="세자 세자1"><span>셋째</span></div>
+            <!-- 글자처럼 옆으로 정렬 할 수 있는게 인라인요소 -->
+            <div class="세자 세자2"><span>셋째</span>자식2</div>
+        </div>
+    </div>
+</body>
+</html>

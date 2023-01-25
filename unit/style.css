@@ -1,0 +1,31 @@
+@charset "UTF-8";
+
+*{margin: 0;padding: 0;}
+:root{
+    /* --(하이폰2개)속성이름:속성 값 */
+    --green :#f00; 
+    --padding-top10 : 10px;
+    --padding-bottom10 : 10px;
+}
+/* root는 변수 */
+
+.전체{ font-style: 1.2em;
+/* 16 x 1.2=19px *em은 내가 가진 폰트사이즈에 
+부모의 폰트 사이즈를 더 가져오는 것*/}
+.전체 .첫째{font-style: 0.5em;
+/* 16p x 1.2 x 0.5 */}
+.전체 .첫째 .첫손{
+    background-color: blue;
+    color: var(--green);
+    /* 변수를 이용하려면 var() 추가  */
+    height: 100vh; /* viewport 높이
+    font-size: 30vw//wievport 높이; */
+    font-style: 0.3rem;
+    padding-top: var(--padding-top10);
+    /* r은? root를 의미함 html에서의 root는 
+    html요소를 의미함  
+    html의 기본폰트크기는 16px이므로 16px을 기준으로 계산함
+    rem은? 위의 부모 em을 쓰든 말든 상관 없이 
+    html이 가지고 있는 16px만 가져와서 계산 
+    16 x 0 .3 */
+}

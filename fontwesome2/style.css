@@ -1,0 +1,23 @@
+@charset "UTF-8";
+.section::after{content: "\f13e"; 
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;}
+    /* fontawesome 5버전을 css에서 사용하기 위해서는 
+    font-family, font-weight가 같이 들어가야함 */
+    /* 무료 버전에서는 5 뒤에 Free로 바꿔줘야함 */
+
+    .wrap2{
+        position: relative;
+        margin-top: 50px;
+        width: 400px;height: 400px;
+        background-color: darkturquoise;
+    }
+    .wrap2 .section2{
+        position: absolute;
+        left: calc(50% - 50px); top: calc(50% - 50px);
+        /* calc은 % 와 px 등 단위가 다른 두가지를 계산 시킬 수 있게 해주는 것 그리고 뺄 때 숫자에 -를 붙이면 
+        그냥 음수로만 생각해서 띄워써야 인식함  */
+        /* transform:translate(-50%,-50%); */
+        width: 100px;height: 100px;
+        background-color: blue;
+    }

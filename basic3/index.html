@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* css */
+        div{color:blue}
+        div.예쁜이{color: pink;}
+        .멋쟁이{color:green;}
+        .넷째 .첫자식{color: gray;}
+        .넷째 div{
+            background-color: aqua;
+            border:red solid 2px; /* 테두리 선 주기 */
+            padding: 5px;
+        }
+        .넷째>div{border-color:  greenyellow;}
+      /*   띄워쓰기 --> 자손 
+                --> 자식  */
+        .막내{}
+        .막내 div{padding: 10px;
+                border:red solid 2px;
+        }
+        .막내>div{
+            border-color: green;
+        }
+        .막내 .막내자식 .막손자{
+            background-color: blueviolet;}
+        .막내 .막내자식.막자2 .막손자{background-color: burlywood;}}
+        </style>
+</head>
+<body>
+    <div class="순둥이">첫번째 줄 입니다</div>
+    <!-- shift+alt 방향키 ↓ (한줄복사)-->
+    <!-- alt + ↑ 위로 이동  -->
+    <div class="예쁜이">두번째 줄 입니다</div>
+    <div class="멋쟁이">세번째 줄 입니다</div>
+    <div class="넷째">
+        <div class="첫자식">첫째자식</div>
+        <div class="첫자식">둘째자식</div>
+        <div class="첫자식">셋째자식</div>
+        <div class="넷째자식">
+            <div class="넷째자식">넷째의 손자</div>
+        </div>
+    </div>
+    <div class="막내">
+        <div class="막내자식 막자1">
+            <div class="막손자">막손자1</div>
+            <div class="막손자">막손자2</div>
+        </div>
+        <div class="막내자식 막자2">
+            <div class="막손자">막손자1</div>
+            <div class="막손자">막손자2</div>
+        </div>
+    </div>
+</body>
+</html>

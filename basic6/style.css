@@ -1,0 +1,91 @@
+@charset "UTF-8";
+*{margin: 0;padding: 0;}
+.치료::after{content: ""; clear: both; display: block;}
+.박일수{background-color: aliceblue;
+width: 1000px; 
+/* margin-left: auto;
+margin-right: auto; */
+margin: 0 auto; /* 상하 좌우 */
+padding: 20px; /* 상하좌우 */
+/* padding: 20px 40px; 상하 좌우 */
+/* padding: 20px 40px 60px; 상 좌우 하 */
+/* padding: 20px 40px 60px 80px; 상 오른쪽 아래 왼쪽 */
+}
+.박일수 .박첫째{background-color:blue;
+    padding: 20px;}
+.박일수 .박첫째 .자식{width: 49%;height: 200px;
+    float: left;}    
+.박일수 .박첫째 .자식.첫째자식1{
+    background-color:blueviolet;
+    margin-right: 1%;
+    padding:20px;
+    border: 5px solid red;
+/*     box-sizing: :border-box;-->
+    width + padding + border를 영역안으로 포함  */
+    box-sizing: border-box;
+}
+.박일수 .박첫째 .자식 .과연{background-color: brown;}
+.박일수 .박첫째 .자식.첫째자식2{
+    background-color:bisque
+}
+.박일수 .박첫째 .자식.첫째자식2 object{
+width: 100%;height: 100%;
+}
+.박일수 .박둘째{background-color: aqua;
+    padding: 20px;
+/* margin:30px 0 0; */ margin-top :30px;}
+.박일수 .박둘째>div{background-color: cadetblue;
+    width: 23.5%; 
+    float: left; 
+    height: 100px;
+    margin-right: 2%;}
+.박일수 .박둘째>div.a1{
+    background-image: url(Huggable.png);
+    background-size: 60px;
+    background-repeat: no-repeat;
+    background-position: 100px 40px; /* x축 y축 */
+    transition: 0.3s;
+}
+.박일수 .박둘째>div.a1:hover{
+    background-size: 100px;
+    background-position: center center;
+}
+.박일수 .박둘째>div.a2{
+    background:#ffff url(before.jpg) no-repeat 50px;
+    background-size: 60%;
+    transition: 0.3s;
+}
+.박일수 .박둘째>div.a2:hover{
+    background-image: url(after.jpg);
+    
+}
+.박일수 .박둘째>div.a3{
+    overflow: hidden;/* //영역보다 큰 자식요소를 숨김 */
+}
+.박일수 .박둘째>div.a3 iframe{
+    width: 100%;
+}
+
+.박일수 .박둘째>div.a4{margin-right: 0;
+    overflow: hidden;}
+.박일수 .박둘째>div.a4 iframe{width: 100%;}
+
+.박일수 .박셋째{background-color: aquamarine;
+margin-top: 30px;
+padding: 20px;
+color: azure;
+font-size: 20px;
+text-align: center;
+line-height: 200px;}
+.박일수 .박셋째>div{
+    background-color: cyan;
+    width: 32%;
+    height: 250px;
+    float: left; 
+    margin-right: 2%;
+} 
+.박일수 .박셋째>div.세자식1{} 
+.박일수 .박셋째>div.세자식2{} 
+.박일수 .박셋째>div.세자식3{
+    margin-right: 0;
+} 

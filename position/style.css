@@ -1,0 +1,86 @@
+@charset "UTF-8";
+*{margin: 0;padding: 0;}
+
+.전체{
+    position: relative;
+    background-color: grey;
+    width: 600px; 
+    border: 5px solid aqua;
+    margin-top: 500px;
+    margin-left: 30px;
+}
+.치료::after{content: ""; clear:both; display: block;}
+.전체>div{
+    width:150px;
+    height: 150px;
+
+}
+.전체 .pink{
+    background-color: pink;
+    position: static;
+    left: 50px;
+}
+.전체 .green{
+    background-color: green;
+    position: relative;
+    /* 원래 자신의 위치를 기억함 
+    주위에 아무런 영향을 주지 않음 
+    레프트, 탑의 기준은 원래 자신의 위치  */
+    left: 250px;
+}
+.전체 .red{
+    background-color: red;
+    position: absolute;
+    /* 원래가진 자신의 영역을 상실 
+    조상을 기준으로 삼는데 
+    조상이 기준이 되기 위해서는 조상의 position이 
+    relative.absolute,fixed이면 기준이 될 수 있다  */
+    left: 100px;top: 100px;
+}
+.전체 .blue{
+    background-color: blue;
+    position: fixed;
+    /* 윈도우 기준으로 배치 */
+    right: 150px; top: 100px;
+}
+
+
+.space{
+    height: 2000px; 
+}
+
+.영역{margin-top: 50px;
+background-color: gray;
+border:5px solid black;
+width: 1000px;
+margin: 50px auto 0;
+padding: 20px;
+box-sizing: border-box;}
+
+.영역>div{
+    background-color: green;
+    width: 49%;
+    float: left;
+    height: 300px;
+}
+
+.영역>div.포지션1{
+    margin-right: 2%;
+    position: relative;
+    overflow: hidden;
+}
+
+.영역>div.포지션1 .포자{
+    width: 0%;
+    height: 0%;
+    background-color: pink;
+    position: absolute;
+    left: 50%; top: 50%;
+    /* transform: translate(x축, y축); %의 기준이 자신  */
+    transform: translate(-50%, -50%);
+    transition: 0.5s;
+}
+.영역>div.포지션1:hover .포자{
+    width: 120%;
+    height: 120%;
+}

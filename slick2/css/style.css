@@ -1,0 +1,71 @@
+@charset "UTF-8";
+*{margin: 0; padding: 0;}
+ul,li{list-style: none;}
+/* li는 블럭요소  */
+
+.wrap{}
+.wrap .container{
+    width: 800px;
+    margin: 0 auto;
+}
+.wrap .container .slick .slick-slide{height: 200px;}
+
+.wrap .container .slick .slick-slide img{
+    width: 100%;
+}
+
+/* slick button */
+.wrap .container .slick .slick-arrow{
+    position: absolute;
+    top: 50%; transform: translateY(-50%);
+    font-size: 0; /* 버튼 폰트 크기 수정 */
+    visibility: hidden;
+}
+.wrap .container .slick .slick-prev{
+    z-index: 10; /* z축으로 더 높게 올리기 */
+    left: 10%; /* 나의 왼쪽을 부모의 왼쪽에 붙히겠다*/
+}
+.wrap .container .slick .slick-prev:after{
+    content: "\f053";
+    visibility: visible;
+    font-size: 30px;    
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    color: azure;
+}
+.wrap .container .slick .slick-next{
+    right: 10%; /* 나의 오른쪽을 부모의 오른쪽으로 붙히겠다 */
+}
+.wrap .container .slick .slick-next:after{
+    content: "\f054";
+    visibility: visible;
+    font-size: 30px;    
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    color: azure;
+}
+
+.wrap .container .slick .slick-dots{
+    text-align: center;
+}
+.wrap .container .slick .slick-dots li{
+    display: inline;
+    /* inline 요소는 padding과 margin의 좌우는 적용되나 상하는 적용이 안됨  */
+    margin:0px 5px;
+}
+.wrap .container .slick .slick-dots li button{
+    font-size: 0; border: none;
+    width: 13px; height: 13px;
+    background-color: aquamarine;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+.wrap .container .slick .slick-dots li.slick-active button{
+    background-color: black;
+    /* 버튼의 색깔 넣기 */
+    width: 20px; border-radius: 10px;
+    
+   /*  인라인 요소 중에서 공간을 인식하는 요소
+    img, button */
+} 

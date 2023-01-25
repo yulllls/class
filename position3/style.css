@@ -1,0 +1,79 @@
+@charset "UTF-8";
+
+*{margin: 0;padding: 0;}
+ul,ol,li{list-style: none;}
+
+.clear::after{content: ""; clear: both; display: block;}
+
+#전체{background-color: antiquewhite;
+padding: 20px;
+width: 800px;
+margin: 0 auto;}
+
+#전체 .첫째자식{background-color: aqua;
+padding: 20px;}
+
+#전체 .첫째자식 .wrap{
+position: relative;
+}
+
+#전체 .첫째자식 .첫째손자{background-color: aquamarine;
+background-image: url(./image/img1.jpg);
+background-size: cover;
+background-position: center; /* 그림이 항상 가운데 오게 하기  */
+height: 200px;}
+
+#전체 .첫째자식 .첫손2{background-color: green;
+position: absolute;
+left: 0; top: 0;
+width: 100%;
+opacity: 0; /* 투명도 */
+transition: 0.3s;
+background-image: url(./image/img2.jpg);}
+
+#전체 .첫째자식:hover .첫손2{
+    opacity: 1;
+}
+
+#전체 .둘째자식{
+    margin-top: 30px;
+    height: 200px;
+    padding: 20px;
+    background-color: blue;
+    box-sizing: border-box;
+    position: relative;
+}
+
+#전체 .둘째자식 .둘째손자{background-color: blueviolet;
+/* height: 100%;  *//* 자식은 부모의 padding에 침범하지 못한다 */
+/* width: 100%; */ /* 기본값 block(부모의 넓이를 차지하는 것) 요소 */
+position: absolute;
+left: 0px;top: 0; /* 넓이 높이 다르게 주는 방법 */ 
+right: 0;bottom: 0; /* 아래 width 넓이 와 height 높이가 있으면 이 코드는 실행하지 않음, 더 높은 코드가 있으면 알아서 취소 됨*/
+width: 200px; height: 100px;}
+
+#전체 .셋째자식{background-color: #EFA3C8;
+margin-top: 30px;}
+#전체 .셋째자식>div{background-color: #FAD3E7;
+width: 40%;
+margin: 0 5%; /* 상하0 좌우5% */
+float: left;}
+
+/* ol,ul */
+#전체 .셋째자식>div ol{
+    list-style-type:georgian;
+}
+#전체 .셋째자식>div ul{}
+#전체 .셋째자식>div li{border: 1px solid gray;}
+
+#전체 .넷째자식{
+    background-color: yellow;
+    margin-top: 30px;
+    padding: 20px;
+}
+
+#전체 .넷째자식 .넷째손자{
+    background-color: wheat;
+}
+#전체 .넷째자식 .넷째손자 dt{background-color: tomato;}
+#전체 .넷째자식 .넷째손자 dd{background-color: thistle;}

@@ -1,0 +1,28 @@
+@charset "UTF-8";
+
+*{margin: 0;padding: 0;}
+
+.wrap{
+    width: 800px;
+    margin: 0 auto;
+    background-color: chartreuse;
+    padding: 200px 0;
+    margin-top: 50px;
+}
+.wrap>div{
+    height: 300px;
+    background-color: cornflowerblue;
+    border: 1px solid #514;
+    border-top: 200px;
+    margin-bottom: 30px;
+}
+
+.wrap>div+div{
+    margin-top: 200px;
+}
+
+.wrap .section2 div{
+    margin-top: 50px;
+}
+
+/* 병합 현상이 일어나면 그 부모에게 padding 의 값을 준다고 기억해두면 됨  */

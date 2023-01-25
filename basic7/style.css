@@ -1,0 +1,46 @@
+@charset "UTF-8";
+
+*{margin: 0;padding: 0;}
+
+/* reset */
+/* 폰트크기의 기본값은 16px */
+h1,h2,h3,h4,h5,h6{font-size: 16px;
+font-weight: normal;} /* 폰트 두께 */
+
+a{text-decoration: none;/* 밑줄 */
+color: black;
+color: #234;} 
+.약::after{content: ""; clear: both; display: block;}
+
+.전체{background-color: aqua;
+    width: 1000px; margin: 30px auto 0;
+    padding: 20px;
+    box-sizing: border-box;
+    }
+.전체>div+div{margin-top: 30px;}
+/* 전체>div+div는? "전체"의 직계 자손인 첫째 div에서 + div인 
+아래 둘째 셋째 이후 넷째 다섯째 등등을 나타냄 
+즉 형제(동생)등에게 무언가 값을 전달해주려고 사용하는 방법   */
+.전체 .첫째{background-color: blanchedalmond;
+    padding: 20px; transition: 0.3s;}
+
+.전체 .첫째:hover{
+        color: aquamarine;
+    }
+.전체 .첫째 .첫자{background-color: brown;
+    width: 49%; height: 200px;
+    float: left; }
+.전체 .첫째 .첫자.첫째자식1{
+    margin-right: 2%;
+}
+.전체 .첫째 .첫자.첫째자식2{}
+
+.전체 .둘째{background-color: blueviolet;}
+.전체 .둘째 p{width: 150px;}
+.전체 .둘째 p a{}
+.전체 .둘째 p a img{width: 100%;}
+/* 인라인 요소는 공간을 인식하지 못한다 
+그래서 넓이,높이 값을 주어도 적용되지 않습니다 
+예외가 있습니다 img,button 태그는 
+인라인 요소이지만 넓이와 높이가 적용됩니다  */
+.전체 .셋째{background-color: blueviolet;}
